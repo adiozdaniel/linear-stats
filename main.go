@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-	fmt.Println("linear stats")
+	if len(os.Args) != 2 {
+		fmt.Println("Wrong Usage, check documentation")
+		return
+	}
 }
