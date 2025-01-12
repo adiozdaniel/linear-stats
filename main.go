@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
+	"strconv"
+	"strings"
 )
 
 func main() {
@@ -24,5 +26,20 @@ func main() {
 		fmt.Println("😱 Error reading file...")
 		return
 	}
-	fmt.Printf("File contents: %s\n", contents)
+
+	data := strings.Split(string(contents), "\n")
+	var actualDataY []float64
+	var lineX []float64
+
+	for i, line := range data {
+		num, err := strconv.ParseFloat(strings.TrimSpace(line), 64)
+		if err != nil {
+			fmt.Printf("🧐 Invalid data at line: %d:\n`%v`\n", i+1, data[i])
+			return
+		}
+
+		actualDataY = append(actualDataY, num)
+		lineX = append(lineX, float64(i))
+	}
+	fmt.Printf("actual data: %v\nlineX: %v\n", actualDataY, lineX)
 }
