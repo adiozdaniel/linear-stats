@@ -33,7 +33,7 @@ func main() {
 
 	for i, line := range data {
 		num, err := strconv.ParseFloat(strings.TrimSpace(line), 64)
-		if err != nil {
+		if err != nil && strings.TrimSpace(line) != "" {
 			fmt.Printf("🧐 Invalid data at line: %d:\n`%v`\n", i+1, data[i])
 			return
 		}
