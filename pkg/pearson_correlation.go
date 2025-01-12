@@ -14,8 +14,8 @@ func PearsonCorrelation(x, y []float64) float64 {
 		sumY2 += y[i] * y[i]
 	}
 
-	numerator := (n * sumXY) - (sumX * sumY)
-	denominator := math.Sqrt((n*sumX2)-(sumX*sumX)) * ((n * sumY2) - (sumY * sumY))
+	numerator := n*sumXY - sumX*sumY
+	denominator := math.Sqrt((n*sumX2 - sumX*sumX) * (n*sumY2 - sumY*sumY))
 
 	if denominator == 0 {
 		return 0
