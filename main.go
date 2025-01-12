@@ -45,8 +45,8 @@ func main() {
 	}
 
 	b0, b1 := pkg.LinearRegression(lineX, actualDataY)
-	Pc := pkg.PearsonCorrelation(lineX, actualDataY)
+	pc := pkg.PearsonCorrelation(lineX, actualDataY)
 
 	fmt.Printf("Linear Regression Line: y = %.6fx + %.6f\n", b0, b1)
-	fmt.Printf("Pearson Correlation Coefficient: %.10f\n", Pc)
+	fmt.Printf("Pearson Correlation Coefficient: %.10f\n", pc)
 }
