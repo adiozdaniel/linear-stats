@@ -5,6 +5,8 @@ import (
 	"os"
 	"strconv"
 	"strings"
+
+	"github.com/adiozdaniel/linear-stats/pkg"
 )
 
 func main() {
@@ -41,5 +43,10 @@ func main() {
 		actualDataY = append(actualDataY, num)
 		lineX = append(lineX, float64(i))
 	}
-	fmt.Printf("actual data: %v\nlineX: %v\n", actualDataY, lineX)
+
+	b0, b1 := pkg.LinearRegression(lineX, actualDataY)
+	Pc := pkg.PearsonCorrelation(lineX, actualDataY)
+
+	fmt.Printf("Linear Regression Line: y = %.6fx + %.6f\n", b0, b1)
+	fmt.Printf("Pearson Correlation Coefficient: %.10f\n", Pc)
 }
