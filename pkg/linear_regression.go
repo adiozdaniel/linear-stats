@@ -1,5 +1,6 @@
 package pkg
 
+// LinearRegression is a function that returns the slope and intercept of the linear regression line
 func LinearRegression(x, y []float64) (float64, float64) {
 	var n = float64(len(x))
 

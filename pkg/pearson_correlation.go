@@ -2,6 +2,7 @@ package pkg
 
 import "math"
 
+// PearsonCorrelation is a function that returns the Pearson Correlation Coefficient
 func PearsonCorrelation(x, y []float64) float64 {
 	var n = float64(len(x))
 	var sumX, sumY, sumXY, sumX2, sumY2 float64

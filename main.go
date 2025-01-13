@@ -9,6 +9,7 @@ import (
 	"github.com/adiozdaniel/linear-stats/pkg"
 )
 
+// main is the application entry point
 func main() {
 	if len(os.Args) != 2 {
 		fmt.Println("😕 Wrong Usage, check documentation")
