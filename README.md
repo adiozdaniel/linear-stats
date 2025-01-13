@@ -20,6 +20,9 @@ This data represents a graph in which the values of the x axis are the number of
 
 *Make sure the file with the data is in the root directory i.e Linear Stats*
 
+- To add the data to the program, create a file with the data and save it in the root directory of the program.
+- To quickly set `0` as a `y` value, just add an empty space. Thus, all empty spaces will be treated as intentional `0` values.
+
 To run the program: ` go run . main.go data.txt`
 
 After reading the file, the program executes the Linear Regression and the Pearson Correlation Coefficient functions and prints the results in the following manner (the following expressions are only examples):
